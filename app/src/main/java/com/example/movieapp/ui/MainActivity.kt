@@ -1,4 +1,4 @@
-package com.example.movieapp.presentation.theme
+package com.example.movieapp.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
