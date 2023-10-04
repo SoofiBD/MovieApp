@@ -16,7 +16,7 @@ class GetMovieUseCase @Inject constructor(
        try {
            emit(Resource.Loading())
            val movieList = repository.getMovies(search)
-           if (movieList.Response.equals("True")) {
+           if (movieList.Response == "True") {
                emit(Resource.Success(movieList.toMovieList()))
            } else {
                emit(Resource.Error(message = "An unexpected error occurred"))
