@@ -1,16 +1,20 @@
-package com.example.movieapp.presentation.movies.views
+package com.example.movieapp.presentation.movies
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.movieapp.domain.use_case.get_movies.GetMovieUseCase
+import com.example.movieapp.presentation.movies.MoviesEvent
+import com.example.movieapp.presentation.movies.MoviesState
 import com.example.movieapp.util.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
+@HiltViewModel
 class MoviesViewModel @Inject constructor(
     private val getMoviesUseCase: GetMovieUseCase
 ) : ViewModel() {
