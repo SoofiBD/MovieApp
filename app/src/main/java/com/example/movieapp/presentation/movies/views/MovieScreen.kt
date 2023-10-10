@@ -3,6 +3,7 @@ package com.example.movieapp.presentation.movies.views
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+<<<<<<< HEAD
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -28,6 +29,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.movieapp.presentation.movies.MoviesEvent
+=======
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
+>>>>>>> origin/master
 import com.example.movieapp.presentation.movies.MoviesViewModel
 
 @Composable
@@ -37,6 +45,7 @@ fun MovieScreen(
 ) {
     val state = viewModel.state.value
 
+<<<<<<< HEAD
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.DarkGray)) {
@@ -109,6 +118,9 @@ fun MovieSearchBar(
         if(isHintDisplayed) {
             Text(text = hint , color = Color.LightGray , modifier = Modifier.padding(8.dp))
         }
+=======
+    Box(modifier = Modifier.fillMaxSize().background(Color.DarkGray)) {
+>>>>>>> origin/master
 
     }
 }
