@@ -25,6 +25,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.example.movieapp.presentation.Screen
 import com.example.movieapp.presentation.movies.MoviesEvent
 import com.example.movieapp.presentation.movies.MoviesViewModel
 
@@ -51,7 +52,8 @@ fun MovieScreen(
             ) {
                 items(state.movies) {movie ->
                     MovieListRow(movie = movie , onItemClick = {
-                        navController.navigate("movie_detail_screen/${movie.imdbID}")
+                    navController.navigate(Screen.MovieDetailScreen.route + "/${movie.imdbID}")
+                    //navController.navigate("movie_detail_screen/${movie.imdbID}")
                     })
                 }
         }
